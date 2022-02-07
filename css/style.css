@@ -1,0 +1,96 @@
+/* Using Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-size: 20px;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  overflow: hidden;
+  color: black;
+}
+.loginform__header {
+  background-color: transparent;
+}
+.loginform {
+  height: 100vh;
+  background: rgb(32, 82, 150);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.loginform h1 {
+  text-align: center;
+  color: white;
+  margin: 0;
+  font-size: 2rem;
+}
+.loginform a {
+  color: white;
+}
+.text {
+  margin: 2em 0 0 0;
+}
+.loginform__btn {
+  width: 100%;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 0;
+  display: inline block;
+}
+.loginform__btn:focus {
+  outline: 0;
+}
+.loginform__btn:active {
+  transform: scale(0.9);
+}
+.loginform__control {
+  position: relative;
+  margin: 1.5em 0 1.5em 0;
+  color: black;
+}
+.loginform__control input {
+  font-size: 0.85rem;
+  padding: 0.5em;
+  width: 100%;
+  display: block;
+  color: white;
+  border: 0;
+  background: white;
+  border-bottom: 2px black solid;
+}
+.loginform__signup {
+  margin-top: 0.5em;
+}
+.loginform__control input:focus,
+.loginform__control input:valid {
+  font-style: inherit;
+  color: black;
+  outline: 0;
+}
+
+.loginform__control label {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  /* This disables the label */
+  pointer-events: none;
+}
+
+.loginform__control label span {
+  display: inline-block;
+  font-size: 1rem;
+  min-width: 0.2em;
+  transition: 0.21s cubic-bezier(0.67, -0.54, 0.264, 1.54);
+}
+
+.loginform__control input:focus + label span,
+.loginform__control input:valid + label span {
+  color: white;
+  transform: translateY(-31px);
+}
