@@ -10,11 +10,13 @@
 </head>
 
 <body>
-    <div class="mainContainer">
+
+    <main>
         <?php
+
         require_once("./UserInterface.php");
+        //default action is loging page.
         $action = isset($_GET['action']) ? $_GET['action'] : ''; //terniary operator
-        echo $action;
 
         $userInterface = new UserInterface();
 
@@ -30,9 +32,10 @@
                 break;
         }
         ?>
-    </div>
 
-    <script src="./js/textWigglyEffect.js"></script>
+        <script src="./js/textWigglyEffect.js"></script>
+    </main>
+
 </body>
 
 </html>
