@@ -10,25 +10,26 @@
 </head>
 
 <body>
-    <div class="loginform">
+    <div class="mainContainer">
+        <?php
+        require_once("./UserInterface.php");
+        $action = isset($_GET['action']) ? $_GET['action'] : ''; //terniary operator
+        echo $action;
 
-        <h1>Internship Time Tracker</h1>
+        $userInterface = new UserInterface();
 
-        <form action="authentication.php" method="POST">
-            <input type="hidden" name="checkUser">
-            <div class="loginform__control">
-                <input type="text" required>
-                <label>Username</label>
-            </div>
-            <div class="loginform__control">
-                <input type="password" required>
-                <label>Password</label>
-            </div>
-            <button name="loginform_submit" class="loginform__btn">Login</button>
-            <div class="loginform__signup">
-                Don't have an account? <a href="registerform.php">Register</a>
-            </div>
-        </form>
+        switch ($action) {
+            case 'login':
+                echo $userInterface->login();
+                break;
+            case 'register':
+                echo $userInterface->register();
+                break;
+            default:
+                echo $userInterface->login();
+                break;
+        }
+        ?>
     </div>
 
     <script src="./js/textWigglyEffect.js"></script>
