@@ -12,28 +12,12 @@
 <body>
 
     <main>
+
         <?php
-
-        require_once("./UserInterface.php");
-        //default action is loging page.
-        $action = isset($_GET['action']) ? $_GET['action'] : ''; //terniary operator
-
-        $userInterface = new UserInterface();
-
-        switch ($action) {
-            case 'login':
-                echo $userInterface->login();
-                break;
-            case 'register':
-                echo $userInterface->register();
-                break;
-            default:
-                echo $userInterface->login();
-                break;
-        }
+        include("./login.php");
         ?>
 
-        <script src="./js/textWigglyEffect.js"></script>
+        <script src="./js/scripts.js"></script>
     </main>
 
 </body>

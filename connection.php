@@ -18,5 +18,13 @@ class Database
         }
         return $this->pdo;
     }
+
+
+    public function filter_test($info)
+    {
+        $info = trim($info);
+        $info = stripslashes($info);
+        $info = htmlspecialchars($info);
+        return $info;
+    }
 }
-$db = new Database();

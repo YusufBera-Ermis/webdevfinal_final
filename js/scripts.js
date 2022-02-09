@@ -1,4 +1,7 @@
 const labels = document.querySelectorAll(".loginform__control label")
+const background = document.getElementById("mainPage")
+const loadingform = document.getElementById("loginform")
+let load = 0
 
 labels.forEach((label) => {
   label.innerHTML = label.innerText
